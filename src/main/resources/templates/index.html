@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Product - Home</title>
+</head>
+<body>
+	<h2>Product Form</h2>
+	<font color="green" th:text="${msg}"></font>
+	<form th:action="@{/product}" th:object="${product}" method="post">
+		<table>
+			<tr>
+				<td>Product ID</td>
+				<td> <input type="text" th:field="*{pid}" /> </td>
+			</tr>
+			<tr>
+				<td>Product Name</td>
+				<td> <input type="text" th:field="*{pname}" /> </td>
+			</tr>
+			<tr>
+				<td>Product price</td>
+				<td> <input type="text" th:field="*{price}" /> </td>
+			</tr>
+			<tr>
+				<td></td>
+				<td> <input type="submit" value="submit" /> </td>
+			</tr>		
+		</table>	
+	</form>
+</body>
+</html>
